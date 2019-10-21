@@ -1,0 +1,11 @@
+## ignore this direction
+/captcha/
+/cuiqingcai/
+/shixin/
+/解析库/
+
+## 过滤word和excel
+*.docx
+*.xlsx
+*.ico
+*.ipynb_checkpoints
