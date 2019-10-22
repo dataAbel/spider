@@ -1,3 +1,0 @@
-<<<<<<< HEAD
-This is a branch test2
-This is a branch test1
