@@ -4,7 +4,7 @@
 /shixin/
 /解析库/
 
-## 过滤word和excel
+## 忽略指定类型的文件
 *.docx
 *.xlsx
 *.ico
