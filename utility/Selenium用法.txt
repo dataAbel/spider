@@ -1,0 +1,77 @@
+1.Selenium选择元素的方法：
+	find_element_by_css_selector:通过元素的class选择
+	find_element_by_xpath:通过xpath选择
+	find_element_by_id:通过元素的id选择
+	find_element_by_name:通过元素的name选择
+	find_element_by_link_text:通过链接地址选择
+	find_element_by_partial_link_text:通过链接的部分地址选择
+	find_element_by_tag_name:通过标签名称选择
+	find_element_by_class_name:通过元素的class选择
+2.上述只查找第一条符合的节点，如查找多个元素，把上述element换成elements即可。
+3.xpath和css_selector是比较好的方法，一方面比较清晰，另一方面相对其他方法定位元素比较准确。
+4.常见的操作元素方法：
+	Clear:清除元素的内容
+	send_keys:模拟按键输入
+	Click:单击元素
+	Submit:提交表单
+	# 例
+	user = driver.find_element_by_name('username')  # 找到用户名输入框
+	user.clear  # 清除用户名输入框内容
+	user.send_keys('1234567')  # 在框中输入用户名
+	pwd = driver.find_element_by_name('password')  # 找到密码输入框
+	pwd.clear  # 清除密码输入框内容
+	pwd.send_keys('******')  # 输入密码
+	driver.find_element_by_id('loginBtn').click()  # 单击登录
+5.Selenium要在整个网页加载出来后才开始爬取内容，速度往往较慢，如果可以抓包爬取方便，尽量抓包。
+	Selenium控制浏览器加载的内容，从而加快爬取速度：
+	（1）控制CSS的加载。CSS样式文件是用来控制页面的外观和元素放置位置的，对内容没有影响。
+	（2）控制图片文件的显示
+	（3）控制JavaScript的运行
+	# 控制CSS
+	from slenium import webdriver
+	fp = webdriver.FirefoxProfile()
+	fp.set_preference('permissions.default.stylesheet', 2)
+	driver = webdriver.Firefox(firefox_profile=fp)
+	driver.get(url)
+	
+	# 限制图片的加载
+	from selenium import webdriver
+	fp = webdriver.FirefoxProfile()
+	fp.set_preference（'permissions.default.image', 2)
+	driver = webdriver.Firefox(firefox_profile=fp)
+	driver.get(url)
+	
+	# 控制JavaScript的运行：如果需要抓取的内容不是通过JS动态加载得到的，可以禁止JS运行来提高抓取的效率。
+	from selenium import webdriver
+	fp = webdriver.FirefoxProfile()
+	fp.set_preference（'javascript.enabled', 2)
+	driver = webdriver.Firefox(firefox_profile=fp)
+	driver.get(url)
+6.隐式等待
+	driver.implicitly_wait(5)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
