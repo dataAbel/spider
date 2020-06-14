@@ -1,0 +1,13 @@
+元素	地址
+某房屋所有数据	div.house-details
+房屋名称	div.house-title>a
+标签	div.house-title>a+i
+房间数	div.details-item>span:first-of-type
+房屋面积	div.details-item>span:nth-child
+楼层	div.details-item>span:nth-child(3)
+建造年份	div.details-item>span:last-child
+总价	span.price-det>strong
+均价	span.unit-price
+小区	span.comm-address
+地址	span.comm-address
+房产经纪人	span.broker-name.broker-text
